@@ -1,37 +1,57 @@
-## Welcome to GitHub Pages
+## Bienvenidos a un tutorial sobre inyección de Dependencias
 
-You can use the [editor on GitHub](https://github.com/lbullon/lbullon.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
+Para ello en primer lugar crearemos un proyecto con dos clases:
 ```markdown
-Syntax highlighted code block
+public class Disco {
+	public Disco() {
+		
+	}
+	private Autor autor;
+	private String titulo;
+	private String fechaLanzamiento;
+	public String getNombre() {
+		return titulo;
+	}
+	public void setNombre(String nombre) {
+		this.titulo = nombre;
+	}
+	public String getFechaLanzamiento() {
+		return fechaLanzamiento;
+	}
+	public void setFechaLanzamiento(String fechaLanzamiento) {
+		this.fechaLanzamiento = fechaLanzamiento;
+	}
+	public Autor getAutor() {
+		return autor;
+	}
+	public void setAutor(Autor autor) {
+		this.autor = autor;
+	}
 
-# Header 1
-## Header 2
-### Header 3
 
-- Bulleted
-- List
+}
 
-1. Numbered
-2. List
+public class Autor {
+	private String nombre;
+	private String nacionalidad;
 
-**Bold** and _Italic_ and `Code` text
+public Autor() {
+	
+};
+public String getNombre() {
+	return nombre;
+}
+public void setNombre(String nombre) {
+	this.nombre = nombre;
+}
+public String getNacionalidad() {
+	return nacionalidad;
+}
+public void setNacionalidad(String nacionalidad) {
+	this.nacionalidad = nacionalidad;
+}
 
-[Link](url) and ![Image](src)
+}
+
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/lbullon/lbullon.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
